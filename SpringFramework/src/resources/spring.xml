@@ -1,0 +1,22 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<!-- Setter Dependency Injection. Pass the value of the class property through a container. Move ??? from compile time to run time. -->
+	<bean id = "t" class="business.Student">
+	<!-- in Setter Injection, you don't have to have all the properties -->
+		<property name="name" value="Arby's"/>
+		<property name="email" value="arbys@foodie.com"/>
+		<property name="age" value="29"/>		
+	</bean>
+	
+	<bean id = "t1" class="business.Student"/>
+	<!-- If you don't provide constructor, this will look for default constructor -->
+	
+	<bean id = "obj" class="business.Student">
+	<!-- In Constructor Injection, you have to include properties according to the constructor provided by the class -->
+	 	<constructor-arg value="Arby's"/>
+	 	<constructor-arg value="28"/>
+	 	<constructor-arg value="arbys@foodie.com"/>
+	</bean>
+	
+</beans>
