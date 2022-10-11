@@ -6,7 +6,7 @@
 	<!-- in Setter Injection, you don't have to have all the properties -->
 		<property name="name" value="Arby's"/>
 		<property name="email" value="arbys@foodie.com"/>
-		<property name="age" value="28"/>		
+		<property name="age" value="26"/>		
 	</bean>
 	
 	<bean id = "t1" class="business.Student"/>
