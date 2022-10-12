@@ -13,7 +13,7 @@
 
 	<!--  used to activate stereotype annotation -->
 	<context:component-scan base-package="business"></context:component-scan>
-	
+
 	<!-- 
         stereotype-> it is package name which have 4 major annotation which will help to create bean of the class
         @Component - Parent
