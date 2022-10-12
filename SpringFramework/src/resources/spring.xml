@@ -32,11 +32,14 @@
 	<property name="accBranchName" value="USA"/>
 	</bean>
 	
-	<bean id = "employee" class="business.Employee">
+	<bean id = "employee" class="business.Employee" autowire="byType">
 	<property name="id" value="100"/>
 	<property name="name" value="Arby's"/>
 	<property name="email" value="arbys@foodie.com"/>
-	<property name="account"><ref bean="account1"/></property>
+	
+	<!-- delete this line after adding autowire by type
+		<property name="account"><ref bean="account1"/></property>
+	 -->
 	</bean>
 	
 	
