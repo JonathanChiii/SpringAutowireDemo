@@ -32,7 +32,13 @@
 	<property name="accBranchName" value="USA"/>
 	</bean>
 	
-	<bean id = "employee" class="business.Employee" autowire="byType">
+	<bean id = "account" class="business.Account">
+	<property name="accNum" value="900"/>
+	<property name="accType" value="current"/>
+	<property name="accBranchName" value="USA"/>
+	</bean>
+	
+	<bean id = "employee" class="business.Employee" autowire="byName">
 	<property name="id" value="100"/>
 	<property name="name" value="Arby's"/>
 	<property name="email" value="arbys@foodie.com"/>
