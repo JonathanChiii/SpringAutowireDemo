@@ -8,49 +8,18 @@
    http://www.springframework.org/schema/context
    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
    
-   <context:annotation-config></context:annotation-config>
+   	<!-- It will activate autowire annotation  -->
+   	<context:annotation-config></context:annotation-config>
 
-	<!-- Setter Dependency Injection. Pass the value of the class property through a container. Move ??? from compile time to run time. -->
-	<bean id = "t" class="business.Student">
-	<!-- in Setter Injection, you don't have to have all the properties -->
-		<property name="name" value="Arby's"/>
-		<property name="email" value="arbys@foodie.com"/>
-		<property name="age" value="26"/>		
-	</bean>
+	<!--  used to activate stereotype annotation -->
+	<context:component-scan base-package="business"></context:component-scan>
 	
-	<bean id = "t1" class="business.Student"/>
-	<!-- If you don't provide constructor, this will look for default constructor -->
-	
-	<bean id = "obj" class="business.Student">
-	<!-- In Constructor Injection, you have to include properties according to the constructor provided by the class -->
-	 	<constructor-arg value="Arby's"/>
-	 	<constructor-arg value="28"/>
-	 	<constructor-arg value="arbys@foodie.com"/>
-	</bean>
-	
-	<bean id = "account1" class="business.Account">
-	<property name="accNum" value="800"/>
-	<property name="accType" value="current"/>
-	<property name="accBranchName" value="USA"/>
-	</bean>
-	
-	<!-- Autowire byName 
-	<bean id = "account" class="business.Account">
-	<property name="accNum" value="900"/>
-	<property name="accType" value="current"/>
-	<property name="accBranchName" value="USA"/>
-	</bean>
-	-->
-	
-	<bean id = "employee" class="business.Employee">
-	<property name="id" value="100"/>
-	<property name="name" value="Arby's"/>
-	<property name="email" value="arbys@foodie.com"/>
-	
-	<!-- delete this line after adding autowire attribute
-		<property name="account"><ref bean="account1"/></property>
-	 -->
-	</bean>
-	
+	<!-- 
+        stereotype-> it is package name which have 4 major annotation which will help to create bean of the class
+        @Component - Parent
+        @Controller - child of component
+        @Service - child of component
+        @Repository - child of component
+    -->
 	
 </beans>
