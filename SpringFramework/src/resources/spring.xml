@@ -7,6 +7,8 @@
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
    http://www.springframework.org/schema/context
    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+   
+   <context:annotation-config></context:annotation-config>
 
 	<!-- Setter Dependency Injection. Pass the value of the class property through a container. Move ??? from compile time to run time. -->
 	<bean id = "t" class="business.Student">
@@ -32,13 +34,15 @@
 	<property name="accBranchName" value="USA"/>
 	</bean>
 	
+	<!-- Autowire byName 
 	<bean id = "account" class="business.Account">
 	<property name="accNum" value="900"/>
 	<property name="accType" value="current"/>
 	<property name="accBranchName" value="USA"/>
 	</bean>
+	-->
 	
-	<bean id = "employee" class="business.Employee" autowire="byName">
+	<bean id = "employee" class="business.Employee">
 	<property name="id" value="100"/>
 	<property name="name" value="Arby's"/>
 	<property name="email" value="arbys@foodie.com"/>
