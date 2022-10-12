@@ -47,7 +47,7 @@
 	<property name="name" value="Arby's"/>
 	<property name="email" value="arbys@foodie.com"/>
 	
-	<!-- delete this line after adding autowire by type
+	<!-- delete this line after adding autowire attribute
 		<property name="account"><ref bean="account1"/></property>
 	 -->
 	</bean>
